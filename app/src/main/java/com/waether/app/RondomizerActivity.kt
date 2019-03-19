@@ -17,7 +17,9 @@ class RondomizerActivity : AppCompatActivity() {
 
         viewModel.rondomValue.observe(this, Observer {rondom_txt_view.text= it.toString()})
 
-
+        button.setOnClickListener{
+            viewModel.incrementNumber()
+        }
 
     }
 }
