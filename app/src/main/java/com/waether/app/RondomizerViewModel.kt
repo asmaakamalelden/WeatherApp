@@ -5,9 +5,7 @@ import android.arch.lifecycle.ViewModel
 import com.example.usecases.Ticker
 import com.example.usecases.numberIncrementer
 import com.example.usecases.randomNumberGenerator
-
-private const val DEFAULT_VALUE = 0
-private const val INCREMENT_VALUE = 1
+ const val DEFAULT_VALUE = 0
 
 class RondomizerViewModel : ViewModel() {
 
@@ -16,16 +14,9 @@ class RondomizerViewModel : ViewModel() {
 
     init {
         rondomValue.value = DEFAULT_VALUE   //on main thread
-
     }
 
-fun incrementNumber(){
-    numberIncrementer(rondomValue)
-}
-
-    override fun onCleared() {
-        super.onCleared()
+    fun incrementNumber() {
+        numberIncrementer(rondomValue)
     }
-
-
 }
